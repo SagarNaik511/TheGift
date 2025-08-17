@@ -1,0 +1,91 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  background: linear-gradient(-45deg, #ffdde1, #ee9ca7, #fbc2eb, #a6c1ee);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  color: #333;
+  margin: 0;
+  padding: 10px;
+}
+
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.container {
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+  width: 95%;
+  max-width: 500px;
+  margin: auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+h1 {
+  color: #e91e63;
+  font-size: 1.6em;
+}
+
+#compliment {
+  font-style: italic;
+  margin: 10px 0;
+  color: #444;
+}
+
+input, select, button {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+button {
+  background: #e91e63;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #c2185b;
+}
+
+#task-list {
+  list-style: none;
+  padding: 0;
+}
+
+#task-list li {
+  margin: 8px 0;
+  font-size: 16px;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+.tag {
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: 8px;
+}
+
+.tag.Biology { background: #c8e6c9; }
+.tag.Physics { background: #bbdefb; }
+.tag.Chemistry { background: #ffe0b2; }
+.tag.General { background: #f0f0f0; }
+
+/* Mobile Optimizations */
+@media (max-width: 600px) {
+  h1 { font-size: 1.3em; }
+  input, select, button { font-size: 13px; padding: 8px; }
+  #task-list li { font-size: 14px; }
+}

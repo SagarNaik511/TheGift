@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>This is your Gift 💖</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🌸 Hey Sinchu, You’ve Got This! 🌸</h1>
+    <p id="quote"></p>
+    <button id="complimentBtn">💖 Cheer Me Up</button>
+    <p id="compliment"></p>
+
+    <h2>📌 Your Tasks</h2>
+    <input type="text" id="taskInput" placeholder="Add a new task...">
+    <select id="category">
+      <option value="General">General</option>
+      <option value="Biology">Biology</option>
+      <option value="Physics">Physics</option>
+      <option value="Chemistry">Chemistry</option>
+    </select>
+    <input type="date" id="dueDate">
+    <button onclick="addTask()">Add Task</button>
+    <button onclick="resetTasks()">🔄 Daily Reset</button>
+    
+    <ul id="task-list"></ul>
+  </div>
+
+  <canvas id="confetti"></canvas>
+  <script src="script.js"></script>
+</body>
+</html>
