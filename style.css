@@ -72,11 +72,13 @@ button:hover {
   font-size: 16px;
   text-align: left;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;  /* keep everything in one row */
   align-items: center;
+  gap: 10px;                    /* spacing between checkbox, text, tag */
   padding: 6px 10px;
   border-radius: 6px;
   background: #f9f9f9;
+  white-space: nowrap;          /* prevent wrapping */
 }
 
 .tag {
@@ -84,6 +86,7 @@ button:hover {
   padding: 2px 6px;
   border-radius: 4px;
   margin-left: 8px;
+  flex-shrink: 0;               /* prevent shrinking on small screens */
 }
 
 .tag.Biology { background: #c8e6c9; }
@@ -98,17 +101,13 @@ button:hover {
   input, select, button {
     font-size: 14px;
     padding: 10px;
-    width: 100%;       /* 🔑 Full width for easier tapping */
+    width: 100%;       /* 🔑 full width for easier tapping */
     margin: 6px 0;
   }
 
   #task-list li {
     font-size: 14px;
-    flex-direction: column;  /* 🔑 Tasks look cleaner on narrow screens */
-    align-items: flex-start;
-  }
-
-  #task-list li .tag {
-    margin-top: 5px;
+    gap: 8px;          /* slightly smaller gap for mobile */
+    white-space: normal; /* allow wrapping only if very long text */
   }
 }
