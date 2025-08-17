@@ -1,3 +1,8 @@
+/* Reset for consistency */
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Segoe UI', sans-serif;
   text-align: center;
@@ -49,6 +54,7 @@ button {
   color: white;
   border: none;
   cursor: pointer;
+  transition: 0.2s;
 }
 
 button:hover {
@@ -58,6 +64,7 @@ button:hover {
 #task-list {
   list-style: none;
   padding: 0;
+  margin-top: 10px;
 }
 
 #task-list li {
@@ -67,8 +74,9 @@ button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 6px;
+  padding: 6px 10px;
   border-radius: 6px;
+  background: #f9f9f9;
 }
 
 .tag {
@@ -83,9 +91,24 @@ button:hover {
 .tag.Chemistry { background: #ffe0b2; }
 .tag.General { background: #f0f0f0; }
 
-/* Mobile Optimizations */
+/* 📱 Mobile Optimizations */
 @media (max-width: 600px) {
   h1 { font-size: 1.3em; }
-  input, select, button { font-size: 13px; padding: 8px; }
-  #task-list li { font-size: 14px; }
+
+  input, select, button {
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;       /* 🔑 Full width for easier tapping */
+    margin: 6px 0;
+  }
+
+  #task-list li {
+    font-size: 14px;
+    flex-direction: column;  /* 🔑 Tasks look cleaner on narrow screens */
+    align-items: flex-start;
+  }
+
+  #task-list li .tag {
+    margin-top: 5px;
+  }
 }
